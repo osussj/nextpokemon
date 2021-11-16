@@ -6,7 +6,7 @@ export default function Home() {
       <h1>MY POKEMONS</h1>
       <nav>
         <div>
-          <Link href="/home">
+          <Link href="/">
             <a>Home</a>
           </Link>
         </div>
