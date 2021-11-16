@@ -16,9 +16,7 @@ const Pokemon = () => {
       <h2>Pokemons super trendies</h2>
       <ul>
         {pokemons &&
-          pokemons.map((pokemon) => (
-            <li key={pokemon.name}>Name: {pokemon.name}</li>
-          ))}
+          pokemons.map((pokemon) => <li key={pokemon.name}>{pokemon.name}</li>)}
       </ul>
     </>
   );

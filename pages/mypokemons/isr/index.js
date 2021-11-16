@@ -6,7 +6,7 @@ const MyPokemons = ({ pokemons }) => {
       {pokemons &&
         pokemons.map((pokemon) => (
           <div key={pokemon.id}>
-            <Link href={`isr/${pokemon.id}`}>
+            <Link href={`/mypokemons/isr/${pokemon.id}`}>
               <a>{pokemon.name}</a>
             </Link>
           </div>

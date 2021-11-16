@@ -1,11 +1,17 @@
+import Link from "next/link";
+
 const MyPokemons = ({ pokemons }) => {
   return (
     <>
       <h1>MyPokemons ssr</h1>
-      <ul>
-        {pokemons &&
-          pokemons.map((pokemon) => <li key={pokemon.id}>{pokemon.name}</li>)}
-      </ul>
+      {pokemons &&
+        pokemons.map((pokemon) => (
+          <div key={pokemon.id}>
+            <Link href={`/mypokemons/ssr/${pokemon.id}`}>
+              <a>{pokemon.name}</a>
+            </Link>
+          </div>
+        ))}
     </>
   );
 };
