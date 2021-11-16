@@ -2,12 +2,14 @@ import Link from "next/link";
 const MyPokemons = ({ pokemons }) => {
   return (
     <>
-      <h1>MyPokemons isr</h1>
+      <h1>MyPokemons ISR</h1>
       {pokemons &&
         pokemons.map((pokemon) => (
-          <div key={pokemon.id}>
+          <div key={pokemon.id} className="list-group">
             <Link href={`/mypokemons/isr/${pokemon.id}`}>
-              <a>{pokemon.name}</a>
+              <a className="list-group-item list-group-item-action list-group-item-light">
+                {pokemon.name}
+              </a>
             </Link>
           </div>
         ))}
@@ -22,7 +24,7 @@ export const getStaticProps = async () => {
     props: {
       pokemons: pokemon,
     },
-    revalidate: 30,
+    revalidate: 20,
   };
 };
 

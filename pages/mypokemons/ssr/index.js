@@ -3,12 +3,14 @@ import Link from "next/link";
 const MyPokemons = ({ pokemons }) => {
   return (
     <>
-      <h1>MyPokemons ssr</h1>
+      <h1>MyPokemons SSR</h1>
       {pokemons &&
         pokemons.map((pokemon) => (
-          <div key={pokemon.id}>
+          <div key={pokemon.id} className="list-group">
             <Link href={`/mypokemons/ssr/${pokemon.id}`}>
-              <a>{pokemon.name}</a>
+              <a className="list-group-item list-group-item-action list-group-item-light">
+                {pokemon.name}
+              </a>
             </Link>
           </div>
         ))}
