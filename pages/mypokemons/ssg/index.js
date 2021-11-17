@@ -18,7 +18,7 @@ const MyPokemons = ({ pokemons }) => {
   );
 };
 
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const response = await fetch("https://pokedex-carlos.herokuapp.com/pokemon");
   const pokemons = await response.json();
   return {
